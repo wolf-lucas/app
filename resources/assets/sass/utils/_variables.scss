@@ -1,0 +1,27 @@
+// Grid Areas
+$grid-areas: 
+    "header"
+    "search-bar"
+    "main"
+    "sidebar"
+    "footer";
+
+// Limits
+$max-width: 75rem;
+
+// Fonts Variables
+$base-font-family: 'Quicksand', sans-serif;
+
+$title-font-size: 1.8rem;
+$title-font-weight: 700;
+
+$normal-font-size: 1.2rem;
+$normal-font-weight: 400;
+
+$logo-font-family: 'Righteous', cursive;
+$logo-font-weight: 700;
+
+
+// Components Variables
+// Cards fonts
+$card-button-font-family: 'Indie Flower', cursive;

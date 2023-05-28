@@ -1,0 +1,40 @@
+@use '../utils';
+
+.carousel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    
+    .carousel__items {
+        //@include utils.background-color('110');
+        display: flex;
+        &> * {
+            margin: 1rem;
+        }
+    }
+
+    .btn-next {
+        position: relative;
+        right: 10px;
+        font-size: 2rem;
+        background: rgba(0, 0, 0, 0);
+
+        &:first-child {
+            left: 10px;
+        }
+
+        &--novisible {
+            display: none;
+        }
+
+    }   
+
+    .rotate-180 {
+        transform: rotate(180deg);
+    }
+
+}
+
+
+//media para cambiar los botones

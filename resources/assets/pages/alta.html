@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/resources/assets/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Alta</title>
+</head>
+<body>
+  <header class="header">
+  <div class="header__container">
+    <div class="logo">
+      <i class="fa-solid fa-dice-d20"></i>
+      <span class="logo__name">Jugetería Cósmica</span>
+    </div>
+    <nav class="nav-bar">
+      <ul class="nav-bar__nav-list">
+        <li class="nav-bar__nav-item">
+          <a href="./index.html" class="nav-bar__nav-link"> Inicio </a>
+        </li>
+        <li class="nav-bar__nav-item">
+          <a href="./alta.html" class="nav-bar__nav-link"> Alta </a>
+        </li>
+        <li class="nav-bar__nav-item">
+          <a href="./contacto.html" class="nav-bar__nav-link"> Contacto </a>
+        </li>
+        <li class="nav-bar__nav-item">
+          <a href="./nosotros.html" class="nav-bar__nav-link"> Nosotros </a>
+        </li>
+      </ul>
+    </nav>
+    <div id="btn-nav-menu" class="btn btn--novisible">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </div>
+  </header>
+    <main class="main">
+      <div class="form-container">
+        <header class="form__header">
+          <h1>Formulario de Alta de Productos</h1>
+        </header>
+        <form id="upload-form" class="form">
+          <div class="field" tabindex="1">
+            <label for="name">
+              <i class="input-icon fa-solid fa-screwdriver"></i> Nombre del Producto:
+            </label>
+            <input class="form-style" name="productName" type="text" maxlength="25" placeholder="Nombre del producto" required>
+          </div>
+          <div class="field-container">
+            <div class="field" tabindex="2">
+              <label for="price">
+                <i class="input-icon fa-solid fa-dollar-sign"></i> Precio:
+              </label>
+              <input class="form-style" name="price" type="number" placeholder="Ingrese el precio" required>
+            </div>
+            <div class="field" tabindex="3">
+              <label for="stock">
+                <i class="input-icon far fa-edit"></i> Unidades a cargar:
+              </label>
+              <input class="form-style" name="stock" type="number" placeholder="Cantidad de unidades" required></input>
+            </div>
+          </div>
+          <div class="field-container">
+            <div class="field" tabindex="4">
+              <label for="brand">
+                <i class="input-icon fa-solid fa-copyright"></i> Marca:
+              </label>
+              <input class="form-style" name="brand" type="text" placeholder="Ingrese una marca" maxlength="30" required>
+            </div>
+            <div class="field" tabindex="5">
+              <label for="category">Categoría: </label>
+              <select class="form-style" name="category" id="category" required>
+                <option value="X">X</option>
+                <option value="Y">Y</option>
+                <option value="Z">Z</option>
+                <option value="W">W</option>
+              </select>
+            </div>
+            <div class="field" tabindex="6">
+              <label for="freeShipping">
+                <i class="input-icon fa-solid fa-truck"></i> Envío sin Cargo:
+              </label>
+              <input class="form-style" name="freeShipping" id='freeShipping' type="checkbox" required>
+            </div>
+          </div>
+          <div class="field" tabindex="7">
+            <label for="shortDesc">
+              <i class="input-icon far fa-edit"></i> Descripción Corta:
+            </label>
+            <input class="form-style" name="shortDesc" type="text" maxlength="40" minlength="10" placeholder="Escribir máx. 40 caracteres" required>
+          </div>
+          <div class="field" tabindex="8">
+            <label for="longDesc">
+              <i class="input-icon far fa-edit"></i> Descripción Larga:
+            </label>
+            <textarea class="form-style" name="longDesc" placeholder="Escribir máx. 150 caracteres" maxlength="150"></textarea>
+          </div>
+          <div class="field-container">
+            <div class="field" tabindex="9">
+              <label for="ageStart">
+                <i class="input-icon far fa-user"></i> Edad desde:
+              </label>
+              <input class="form-style" name="ageStart" min="1" max="99" type="number" placeholder="1-99">
+            </div>
+            <div class="field" tabindex="10">
+              <label for="ageEnd">
+                hasta: 
+              </label>
+              <input class="form-style" name="ageEnd" min="1" max="99" type="number" placeholder="1-99">
+            </div>
+          </div>
+          <div class="field" tabindex="11">
+            <label for="image">
+              <i class="input-icon fa-regular fa-image"></i> Imagen:
+            </label>
+            <input class="form-style" name="image" type="file" required>
+          </div>
+          <div class="field-container">
+            <button class="btn btn-submit" type="submit">Cargar Item</button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__container">
+          <div class="logo">
+            <i class="fa-solid fa-dice-d20"></i>
+            <span class="logo__name">Jugetería Cósmica</span>
+          </div>
+          <div class="footer-listados__container">
+            <div class="footer-listados__col">
+              <ul class="list-unstyled">
+                <li><a href="">Productos</a></li>
+                <li><a href="">Beneficio</a></li>
+                <li><a href="">Ofertas</a></li>
+                <li><a href="">Equipo</a></li>
+              </ul>
+            </div>
+            <div class="footer-listados__col">
+              <ul class="list-unstyled">
+                <li><a href="">Soporte</a></li>
+                <li><a href="">Terminos & Condiciones</a></li>
+                <li><a href="">Sobre Nosotros</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-social__container">
+            <ul class="nav-bar__nav-list">
+              <li class="nav-bar__nav-item"><a href="" class="nav-bar__nav-link idx-0"><i class="fa-brands fa-facebook"></i></a></li>
+              <li class="nav-bar__nav-item"><a href="" class="nav-bar__nav-link"><i class="fa-brands fa-twitter"></i></a></li>
+              <li class="nav-bar__nav-item"><a href="" class="nav-bar__nav-link"><i class="fa-brands fa-github"></i></a></li>
+              <li class="nav-bar__nav-item"><a href="" class="nav-bar__nav-link"><i class="fa-brands fa-instagram"></i></a></li>
+            </ul>
+          </div>
+      </div>
+    </footer>
+  
+</body>
+<script src="../js/main.js"></script>
+</html>

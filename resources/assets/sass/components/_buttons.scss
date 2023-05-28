@@ -1,0 +1,46 @@
+@use 'sass:map';
+@use '../utils';
+
+
+.btn {
+    @include utils.background-color('120');
+    @include utils.font-color('110');
+    border-radius: .3rem;
+    padding: .3rem .6rem;
+    cursor: pointer;
+    
+    &--novisible {
+        display: none;
+        
+        &.active {
+            @include utils.font-color('210')
+        }
+    }
+    
+    &:hover {
+        @include utils.font-color('210');
+    }
+
+    &-next {
+        @include utils.background-color('130');
+        @include utils.font-color('110');
+        border-radius: 40%;
+        border: none;
+        padding: .3rem .6rem;
+        cursor: pointer;
+    
+        &--novisible {
+            display: none;
+
+        }
+    
+        &:hover {
+            @include utils.font-color('210');
+        }
+    }
+}
+
+.btn-compra {
+    width: auto;
+    text-align: center;
+}

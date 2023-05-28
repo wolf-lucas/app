@@ -1,0 +1,76 @@
+@use '../utils';
+@use 'sass:map';
+
+$header-background-color: map.get(utils.$colors-backgorund, '100');
+$header-font-color: map.get(utils.$colors-font, '110');
+$max-width: 80rem;
+
+.header {
+    background-color: $header-background-color;
+    color: $header-font-color;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+
+    &__container {
+        max-width: $max-width;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1.25rem;
+    }
+
+    .logo {
+        font-size: 2rem;
+        padding: 0.5rem;
+
+        &__name {
+            font-family: utils.$logo-font-family;
+            font-size: 1.5rem;
+        }
+
+    }
+
+    .search-bar {
+        max-width: 60rem;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        padding: 0.5rem 0 1rem 0;
+    }
+
+}
+
+@media screen and (max-width: map.get(utils.$grid-breakpoints, 'sm')) {
+    nav {
+        display: none;
+    }
+    #btn-nav-menu {
+        display: block;
+    }
+    .nav-bar.active {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 80px;
+        width: 100%;
+        background-color: $header-background-color;
+
+        .nav-bar__nav-list {
+            display: block;
+            
+            .nav-bar__nav-item {
+                border-bottom: 1px solid $header-font-color;
+                text-align: center;
+                &:hover {
+                    @include utils.font-color('210');
+                }
+            }
+        }
+
+    }
+
+
+}

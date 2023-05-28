@@ -1,0 +1,47 @@
+@use 'sass:map';
+@use '../utils';
+
+$background-color: map.get(utils.$colors-backgorund, '100');
+$font-color: map.get(utils.$colors-font, '110');
+
+.footer {
+  height: 300px;
+
+  &__container {
+    padding-top: 2rem;
+    height: 100%;
+    width: 100%;
+    background-color: $background-color;
+    color: #bbb;
+
+    .logo {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+  }
+  &-listados__container {
+    display: flex;
+    justify-content: space-evenly;
+    
+  }
+  &-social__container {
+    text-align: center;
+    margin-top: 2rem;
+
+  }
+
+  a {
+    color: #999;
+    text-decoration:none;
+  
+    &:hover, &:focus {
+        color: #aaa;
+        text-decoration:none;
+        border-bottom:1px dotted #999;
+    }
+  }
+
+  .list-unstyled {
+    list-style: none;
+  }
+}

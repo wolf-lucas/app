@@ -1,0 +1,33 @@
+@use 'sass:map';
+@use '../utils';
+
+$nav-background-color: map.get(utils.$colors-backgorund, '100');
+$nav-font-color: map.get(utils.$colors-font, '110');
+
+.nav-bar {
+
+    &__nav-list {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        list-style-type: none;
+    }
+
+    &__nav-link {
+        color: $nav-font-color;
+        text-align: none;
+        margin: 0 1rem;
+        padding: 0.2rem;
+        transition: .2s;
+        text-decoration: none;     
+    }
+
+    &__nav-link:hover {
+        @include utils.font-color('200');
+    }
+
+    a {
+        text-decoration:none;
+    }
+
+};

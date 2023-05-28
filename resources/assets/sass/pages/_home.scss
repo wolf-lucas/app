@@ -1,0 +1,95 @@
+@use 'sass:map';
+@use '../utils';
+@use '../components/cards';
+@use '../layout/sidebar';
+@use '../layout/header';
+
+$base-backgorund-color: map.get(utils.$colors-backgorund, '100');
+$base-font-color: map.get(utils.$colors-font, '110');
+
+   
+.main-container {
+    display: flex;
+    justify-content: center;
+            
+    .products-container {
+        width: 100vw;
+        //display: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        .section-top20 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &__header {
+                margin: 2rem 0rem 1rem 0rem;
+                left: 10%
+            }
+
+            .top20-container {
+                //background-color: aliceblue;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        .section-cards {
+            width: 100%;
+            max-width: header.$max-width + 20rem;
+            margin: 2rem;
+            padding: 2rem;
+            //box-shadow: $base-backgorund-color 10px 20px 30px 10px;
+
+            &__header {
+                display: flex;
+                flex-direction: column;
+                gap: .8rem;
+                margin-bottom: 2rem;
+
+                p {
+                    margin: auto;
+                    display: none;
+                }
+            }
+            
+            .cards-container {
+                display: grid;
+                grid-auto-flow: dense;
+                gap: 2rem;
+                overflow-wrap: wrap;
+                grid-template-columns:
+                    repeat(auto-fill, minmax(min(cards.$cards-max-width, 100%), 1fr));
+            }
+        }
+    }
+
+    .shopping-cart {
+        &__container {  
+            display: none;
+                
+            &.active {
+                display: flex;
+                flex-direction: column;
+                box-shadow: $base-font-color -5px 0px 20px -1px;
+                background-color: map.get(utils.$colors-backgorund, '100');
+                color: $base-font-color;
+            }
+        }
+        
+    }
+}
+
+#btn-shop-cart.active {
+    @include utils.font-color('210');
+}
+
+#btn-nav-menu.active {
+    @include utils.font-color('210');
+}
+
+
+

@@ -1,0 +1,132 @@
+@use 'sass:map';
+@use '../utils';
+
+$cards-max-width: 15rem;
+$cards-max-height: 25rem;
+$cards-background-color: map.get(utils.$colors-backgorund, '100');
+$cards-font-color: map.get(utils.$colors-font, '110');
+$cards-glow-backgroud-color: map.get(utils.$colors-font, '120');
+
+.card {
+    background-color: $cards-background-color;
+    width: $cards-max-width;
+    max-height: $cards-max-height;
+    height: 25rem;
+    border-radius: 2%;
+    box-shadow: $cards-glow-backgroud-color 0px 5px 15px;
+    //position: relative;
+    
+    a {
+        text-decoration: none;
+        font-size: 1rem;
+    }
+
+    &__article {
+        //background-color: bisque;
+        color: $cards-font-color;
+    }
+
+    &__image-container {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+
+    &__image {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    &__content {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+
+        p {
+            margin-top: .2rem;
+            overflow: hidden;
+        }
+
+    }
+
+    &__price-container {
+        margin: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .card__price {
+            margin-top: auto;
+            font-size: 1.2rem;
+        }
+    }
+    
+    .card-quantity__form {
+        &-add-qty {
+            width: 2rem;
+            border: none;
+            border-radius: 15%;
+            background: white;
+            opacity: 1;
+            text-align: center;
+            font-size: 1rem;
+            height: 100%;
+        }
+
+        .btn {
+            border: none;
+        }
+       
+    }
+}
+
+.shop-cart {
+
+    &__card {
+        margin: 1rem 0.5rem;
+        box-shadow: $cards-glow-backgroud-color 0px 5px 15px;
+        width: 35rem;
+    }
+    
+    &__article {
+        display: flex;
+    
+        &-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: .5rem;
+
+            .shop-cart__item {
+                &-price {
+                    margin-top: auto;
+                }
+                &-total {
+                    margin-top: auto;
+                }
+            }
+        }
+
+        &-buttons {
+            display: flex;
+            flex-direction: column;
+            margin-left: auto;
+            padding: 1rem;
+        }
+
+        &-minus {
+            margin-top: auto;
+        }
+    }
+
+    &__image-container {
+        height: 10rem;
+        overflow: hidden;
+        position: relative;
+    }
+
+   
+
+    
+
+}

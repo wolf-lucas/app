@@ -1,0 +1,8 @@
+@use '../utils';
+
+.main {
+    @include utils.background-color('105');
+    @include utils.font-color('110');
+    width: 100%;
+    height: 100%;
+}

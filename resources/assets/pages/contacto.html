@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/resources/assets/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Alta</title>
+</head>
+<body>
+  <header class="header">
+  <div class="header__container">
+      <div class="logo">
+      <i class="fa-solid fa-dice-d20"></i>
+      <span class="logo__name">Jugetería Cósmica</span>
+      </div>
+      <nav class="nav-bar">
+      <ul class="nav-bar__nav-list">
+          <li class="nav-bar__nav-item">
+          <a href="./index.html" class="nav-bar__nav-link"> Inicio </a>
+          </li>
+          <li class="nav-bar__nav-item">
+          <a href="./alta.html" class="nav-bar__nav-link"> Alta </a>
+          </li>
+          <li class="nav-bar__nav-item">
+          <a href="./contacto.html" class="nav-bar__nav-link"> Contacto </a>
+          </li>
+          <li class="nav-bar__nav-item">
+          <a href="./nosotros.html" class="nav-bar__nav-link"> Nosotros </a>
+          </li>
+      </ul>
+      </nav>
+      <div id="btn-nav-menu" class="btn btn--novisible">
+      <i class="fa-solid fa-bars"></i>
+      </div>
+  </div>
+  </header>
+  <main class="main">
+    <div class="form-container">
+      <header class="form__header">
+          <h1>Formulario de Alta de Productos</h1>
+      </header>
+      <form id="contact-form" class="form">
+          <div class="field" tabindex="1">
+            <label for="username">
+              <i class="far fa-user"></i> Tu Nombre:
+            </label>
+            <input class="form-style" id="username" name="username" type="text" placeholder="Nombre Apellido" required>
+          </div>
+          <div class="field" tabindex="2">
+            <label for="email">
+              <i class="far fa-envelope"></i> Correo Electrónico:
+            </label>
+            <input class="form-style" name="email" type="email" placeholder="email@dominio.com" required>
+          </div>
+          <div class="field" tabindex="3">
+            <label for="message">
+              <i class="far fa-edit"></i> Consulta:
+            </label>
+            <textarea class="form-style" name="message" placeholder="Escribir máx. 300 caracteres" maxlength="300" required></textarea>
+          </div>
+          <button class="btn btn-submit" type="submit">Send Me Message</button>
+      </form>
+    </div>
+  </main>
+  <footer class="footer">
+  <div class="footer__container">
+      <div class="logo">
+          <i class="fa-solid fa-dice-d20"></i>
+          <span class="logo__name">Jugetería Cósmica</span>
+      </div>
+      <div class="footer-listados__container">
+          <div class="footer-listados__col">
+          <ul class="list-unstyled">
+              <li><a href="">Productos</a></li>
+              <li><a href="">Beneficio</a></li>
+              <li><a href="">Ofertas</a></li>
+              <li><a href="">Equipo</a></li>
+          </ul>
+          </div>
+          <div class="footer-listados__col">
+          <ul class="list-unstyled">
+              <li><a href="">Soporte</a></li>
+              <li><a href="">Terminos & Condiciones</a></li>
+              <li><a href="">Sobre Nosotros</a></li>
+          </ul>
+          </div>
+      </div>
+      <div class="footer-social__container">
+          <ul class="nav-bar__nav-list">
+            <li class="nav-bar__nav-item"><a href="" class="nav-bar__nav-link idx-0"><i class="fa-brands fa-facebook"></i></a></li>
+            <li class="nav-bar__nav-item"><a href="" class="nav-bar__nav-link"><i class="fa-brands fa-twitter"></i></a></li>
+            <li class="nav-bar__nav-item"><a href="" class="nav-bar__nav-link"><i class="fa-brands fa-github"></i></a></li>
+            <li class="nav-bar__nav-item"><a href="" class="nav-bar__nav-link"><i class="fa-brands fa-instagram"></i></a></li>
+          </ul>
+      </div>
+  </div>
+  </footer>
+</body>
+<script src="../js/main.js"></script>
+</html>

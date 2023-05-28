@@ -1,0 +1,29 @@
+@use 'sass:map';
+@use '../utils';
+
+.search-bar {
+    display: grid;
+    overflow-wrap: wrap;
+    gap: 1rem;
+    grid-template: 
+        "icon form form form boton";
+
+    &__form-container {
+        grid-area: "form";
+        margin-right: 2rem;
+    }
+    &__form-label {
+        grid-area: "icon";
+        margin-right: 1rem;
+    }
+    &__form-search {
+        border-radius: .2rem;
+        color:white;
+        width: 15rem;
+        background-color: map.get(utils.$colors-backgorund, '130');
+    }
+    &__form-submit {
+        grid-area: "boton";
+        color: map.get(utils.$colors-font, '110');
+    }
+}

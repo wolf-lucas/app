@@ -1,0 +1,51 @@
+@use '../utils';
+@use 'sass:map';
+@use '../components/cards';
+
+$background-color: cards.$cards-background-color;
+
+.form {
+    background-color: $background-color;
+    padding: 1rem;
+    border-radius: .2rem;
+    box-shadow: cards.$cards-glow-backgroud-color 0px 5px 15px;
+    
+    .form-style {
+        margin: 1rem;
+        padding: 1rem 1.5rem;
+        border-radius: 4px;
+        font-size: 1.1rem;
+        color: #c4c3ca;
+        @include utils.background-color('105');
+        border: none;
+        transition: all 200ms linear;
+        box-shadow: 0 0.5rem 8px 0 cards.$cards-glow-backgroud-color;
+
+        &:focus, &:active {
+            border: none;
+            outline: none;
+            box-shadow: 0 4px 8px 0 cards.$cards-glow-backgroud-color;
+        }
+    }
+    .field-container {
+        display: flex;
+        align-items: center;
+    }
+    .btn-submit {
+        margin: 1.5rem 1rem 1.5rem auto;
+        padding: 0.6rem 1.5rem;
+        font-size: 1.3rem;
+        box-shadow: 0 0.5rem 1rem 0 map.get(utils.$colors-font, '200')
+    }
+}
+
+@media screen and (max-width: map.get(utils.$grid-breakpoints, 'sm')) {
+    .form {
+        height: auto;
+        width: auto;
+        .field-container {
+            display: block;
+        }
+    }
+}
+   

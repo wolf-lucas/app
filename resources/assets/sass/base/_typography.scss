@@ -1,0 +1,14 @@
+@use '../utils/variables' as v;
+
+body {
+    font-size: v.$normal-font-size;
+    font-weight: v.$normal-font-weight;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: v.$title-font-weight;
+}
+
+h1 {
+    font-size: v.$title-font-size;
+}

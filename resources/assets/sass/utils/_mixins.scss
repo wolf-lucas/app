@@ -1,0 +1,39 @@
+@use 'sass:map';
+@use 'sass:list';
+@use './breakpoints' as brpoints;
+@use './colors';
+@use './variables';
+
+@mixin media-breakponit-down ($br) {
+    @if not map.get(brpoints.$grid-breakpoints, $br) {
+        @error "#{$br} is not a valid breakpoint. Expected one of #{brpoints.$grid-breakpoints}.";
+    }
+
+    @media screen and (max-width: map.get(brpoints.$grid-breakpoints, $br)) {
+        background-color: white;
+    }
+};
+
+@mixin background-color($key: '50') {
+    @if not map.get(colors.$colors-backgorund, $key) {
+        @error "#{$key} is not a valid color. Expected one of #{colors.$colors-backgorund}.";
+    }
+
+    background-color: map.get(colors.$colors-backgorund, $key);
+    
+};
+
+@mixin font-color($key: '50') {
+    @if not map.get(colors.$colors-font, $key) {
+        @error "#{$key} is not a valid color. Expected one of #{colors.$colors-font}.";
+    }
+    color: map.get(colors.$colors-font, $key);
+    
+}
+
+@mixin set-area ($area) {
+    @if not list.index(variables.$grid-areas, $area) {
+        @error "'#{$area}' is not a valid area. Expected one of [#{variables.$grid-areas}.]";
+    }
+    grid-area: $area;
+}

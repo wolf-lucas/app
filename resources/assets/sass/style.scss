@@ -1,0 +1,23 @@
+// Base
+@use './base/base';
+@use './base/typography';
+@use './base/reset';
+
+//Components
+@use './components/buttons';
+@use './components/searchbar';
+@use './components/cards';
+@use './components/carousel';
+@use './components/forms';
+
+//Layouts
+@use './layout/navigation';
+@use './layout/header';
+@use './layout/footer';
+@use './layout/sidebar';
+@use './layout/main';
+
+// Pages
+@use './pages/home';
+@use './pages/alta';
+@use './pages/contacto';
